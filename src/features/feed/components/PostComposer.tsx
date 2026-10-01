@@ -19,10 +19,10 @@ export default function PostComposer() {
     handleSubmit,
     reset,
     watch,
-    formState: { isValid },
+    formState: { isValid, errors },
   } = useForm<PostFormValues>({
     resolver: zodResolver(postSchema),
-    mode: 'onChange',
+    mode: 'onTouched',
     defaultValues: { content: '' },
   })
 
@@ -100,9 +100,16 @@ export default function PostComposer() {
           {...register('content')}
           rows={3}
           placeholder="What's on your mind?"
+          aria-invalid={Boolean(errors.content)}
+          aria-describedby={errors.content ? 'post-content-error' : undefined}
           className="w-full resize-none bg-transparent pt-2 text-[15px] outline-none placeholder:text-slate-400"
         />
       </div>
+      {errors.content?.message && (
+        <p id="post-content-error" role="alert" className="mt-2 pl-12 text-sm text-rose-500">
+          {errors.content.message}
+        </p>
+      )}
       {media.length > 0 && (
         <div className="mt-4 flex gap-3 overflow-x-auto">
           {media.map((item, index) => (
