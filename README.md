@@ -6,8 +6,10 @@ A responsive social feed demo built with React, TypeScript and Vite. Browse post
 
 ## Screenshots
 
-<img src="docs/feed-dark.png" width="800" alt="Pulse feed in dark mode" />
-<img src="docs/feed-light.png" width="800" alt="Pulse feed in light mode" />
+<img width="1880" height="901" alt="Screenshot 2026-10-02 112517" src="https://github.com/user-attachments/assets/20f81ed0-1a90-4464-894f-f0672682b3d6" />
+<img width="1692" height="900" alt="Screenshot 2026-10-02 112709" src="https://github.com/user-attachments/assets/cc0f1e84-faa6-4231-acd9-cc9a984547cc" />
+
+
 
 ## Highlights
 
