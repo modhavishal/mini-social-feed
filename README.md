@@ -1,6 +1,20 @@
 # Pulse
 
-A responsive social feed demo built with React, TypeScript, and Vite. Browse posts, share text and media, and join threaded conversations.
+A responsive social feed demo built with React, TypeScript and Vite. Browse posts, share text and media, and join threaded conversations.
+
+**Live demo:** https://mini-social-feed-ten.vercel.app
+
+## Screenshots
+
+<img src="docs/feed-dark.png" width="800" alt="Pulse feed in dark mode" />
+<img src="docs/feed-light.png" width="800" alt="Pulse feed in light mode" />
+
+## Highlights
+
+- Infinite scroll with loading skeletons
+- Optimistic like updates with TanStack Query
+- Type-safe post form with React Hook Form and Zod
+- Media carousel with lightbox, plus light and dark themes
 
 ## Features
 
@@ -13,6 +27,16 @@ A responsive social feed demo built with React, TypeScript, and Vite. Browse pos
 - Edit and delete your own posts
 - Light and dark themes
 - Responsive layout for desktop and mobile
+
+## Tech Stack
+
+- React 19 and TypeScript
+- Vite 8
+- Tailwind CSS 4
+- TanStack Query for feed and mutation state
+- React Hook Form and Zod for post validation
+- Zustand for theme state
+- Oxlint
 
 ## Getting Started
 
@@ -41,16 +65,6 @@ Vite prints the local development URL in the terminal after it starts.
 | `npm run preview` | Serve the production build locally |
 | `npm run lint` | Run Oxlint |
 
-## Tech Stack
-
-- React 19 and TypeScript
-- Vite 8
-- Tailwind CSS 4
-- TanStack Query for feed and mutation state
-- React Hook Form and Zod for post validation
-- Zustand for theme state
-- Oxlint
-
 ## Project Structure
 
 ```text
@@ -63,3 +77,7 @@ src/
 ## Demo Data and Media
 
 The feed API is an in-memory mock in `src/features/feed/api.ts`; it does not connect to a server or database. Posts, comments, likes, and edits reset when the page reloads. Selected media uses browser object URLs and is not uploaded or persisted. Add a backend and media-storage service to make posts persistent.
+
+## Author
+
+Built by [Vishal Modha](https://github.com/modhavishal), React and TypeScript developer.
